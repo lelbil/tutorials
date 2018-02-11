@@ -1,0 +1,13 @@
+FROM node:latest
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+copy ["src", "/app"]
+
+EXPOSE 8080
+
+CMD ["nodemon", "server.js"]
