@@ -1,0 +1,23 @@
+{
+  "name": "es-test",
+  "version": "1.0.0",
+  "description": "learning to use elastic search",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --inspect=0.0.0.0:9229 server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lelbil/tutorials/tree/master/elasticSearch"
+  },
+  "author": "lelbil",
+  "license": "ISC",
+  "dependencies": {
+    "elasticsearch": "13.3.1",
+    "joi": "13.0.1",
+    "koa": "2.4.1",
+    "koa-joi-validate": "0.5.1",
+    "koa-router": "7.2.1"
+  }
+}
