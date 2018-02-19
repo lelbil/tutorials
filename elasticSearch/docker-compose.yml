@@ -11,8 +11,6 @@ services:
    - NODE_ENV=local
    - ES_HOST=elasticsearch
    - PORT=3000
-  volumes:
-   - ./books:/usr/src/app/books
 
  frontend:
   container_name: es-frontend
