@@ -10,8 +10,14 @@ const router = new Router()
 
 const PORT = process.env.PORT || 3000
 
-router.get('/search', async (ctx, next) => {
+router.get('/search', validate({
+    query: {
+        term: joi.string().max(254).required(),
+        offset: joi.number().min(0).default(0),
+    }
+}), async ctx => {
     const {term, offset} = ctx.request.query
+
     ctx.body = await search.queryTerm(term, offset)
 })
 
